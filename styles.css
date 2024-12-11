@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden; /* Щоб приховати горизонтальну прокрутку під час анімації */
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    transform-origin: left; /* Точка обертання для ефекту книги */
+    animation: openBook 1s ease-out; /* Анімація відкриття книги */
+}
+
+main section {
+    margin: 20px 0;
+}
+
+main img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes openBook {
+    from {
+        transform: rotateY(90deg); 
+    }
+    to {
+        transform: rotateY(0); 
+    }
+}
+
+@keyframes closeBook {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(90deg);
+    }
+}
